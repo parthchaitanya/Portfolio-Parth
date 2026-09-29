@@ -9,6 +9,8 @@ export const profile = {
   // Hero portrait from the template. For reliability, download it into /public
   // (e.g. /public/portrait.png) and set this to '/portrait.png'. Set to null to show the 3D orb instead.
   portrait: 'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png' as string | null,
+  // Put your resume PDF at /public/resume.pdf — this is what the download button links to.
+  resumeUrl: '/resume.pdf',
   about:
     "I'm a B.Tech AI & ML student at Galgotias College, Noida. I build LLM-powered applications, agentic RAG systems and ML pipelines with Python, FastAPI, LangGraph and vector databases, and I ship them with Docker, CI/CD and automated tests. Let's build something intelligent together!",
 };

@@ -1,6 +1,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import FadeIn from '../components/FadeIn';
 import ContactButton from '../components/ContactButton';
+import ResumeButton from '../components/ResumeButton';
 import { profile, socials } from '../data';
 
 export default function ContactSection() {
@@ -15,8 +16,9 @@ export default function ContactSection() {
           {profile.email}
         </a>
       </FadeIn>
-      <FadeIn delay={0.3}>
+      <FadeIn delay={0.3} className="flex flex-wrap justify-center gap-3">
         <ContactButton label="Say Hello" />
+        <ResumeButton />
       </FadeIn>
       <FadeIn delay={0.4} className="flex flex-wrap justify-center gap-3">
         {socials.map((s) => (
