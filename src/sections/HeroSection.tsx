@@ -51,29 +51,34 @@ export default function HeroSection() {
         </FadeIn>
       </div>
 
-      <FadeIn
-        delay={0.6}
-        y={30}
+      {/* Positioning lives on a plain div: FadeIn's framer-motion transform would override Tailwind's translate classes. */}
+      <div
         className={
           showPortrait
-            ? 'absolute left-1/2 top-1/2 z-10 w-[280px] -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-0 sm:w-[360px] sm:translate-y-0 md:w-[440px] lg:w-[520px]'
-            : 'pointer-events-none absolute left-1/2 top-1/2 z-10 w-[240px] -translate-x-1/2 -translate-y-1/2 sm:top-auto sm:bottom-[4%] sm:w-[320px] sm:translate-y-0 md:w-[380px] lg:w-[440px]'
+            ? 'absolute inset-x-0 top-1/2 z-10 flex -translate-y-1/2 justify-center sm:top-auto sm:bottom-0 sm:translate-y-0'
+            : 'pointer-events-none absolute inset-x-0 top-1/2 z-10 flex -translate-y-1/2 justify-center sm:top-auto sm:bottom-[4%] sm:translate-y-0'
         }
       >
-        <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
-          {showPortrait ? (
-            <img
-              src={profile.portrait!}
-              alt={profile.fullName}
-              className="block w-full select-none"
-              draggable={false}
-              onError={() => setPortraitFailed(true)}
-            />
-          ) : (
-            <Orb />
-          )}
-        </Magnet>
-      </FadeIn>
+        <FadeIn
+          delay={0.6}
+          y={30}
+          className={showPortrait ? 'w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]' : 'w-[240px] sm:w-[320px] md:w-[380px] lg:w-[440px]'}
+        >
+          <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
+            {showPortrait ? (
+              <img
+                src={profile.portrait!}
+                alt={profile.fullName}
+                className="block w-full select-none"
+                draggable={false}
+                onError={() => setPortraitFailed(true)}
+              />
+            ) : (
+              <Orb />
+            )}
+          </Magnet>
+        </FadeIn>
+      </div>
     </section>
   );
 }
