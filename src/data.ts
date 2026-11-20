@@ -29,6 +29,7 @@ export const navLinks = [
 
 export type Tile = { name: string; group: string };
 
+
 export const marqueeRow1: Tile[] = [
   { name: 'Python', group: 'Language' },
   { name: 'LangGraph', group: 'Agentic AI' },
@@ -36,11 +37,11 @@ export const marqueeRow1: Tile[] = [
   { name: 'Pinecone', group: 'Vector DB' },
   { name: 'OpenAI API', group: 'LLM' },
   { name: 'Groq', group: 'LLM' },
+  { name: 'Ollama', group: 'Local LLM' },
   { name: 'Tavily', group: 'Web Search' },
   { name: 'sentence-transformers', group: 'Embeddings' },
   { name: 'Scikit-learn', group: 'Machine Learning' },
   { name: 'Pandas', group: 'Data' },
-  { name: 'NumPy', group: 'Data' },
 ];
 
 export const marqueeRow2: Tile[] = [
@@ -49,10 +50,10 @@ export const marqueeRow2: Tile[] = [
   { name: 'Docker', group: 'DevOps' },
   { name: 'GitHub Actions', group: 'CI / CD' },
   { name: 'SQLAlchemy', group: 'ORM' },
+  { name: 'SQLite', group: 'Database' },
   { name: 'MySQL', group: 'Database' },
   { name: 'MongoDB', group: 'Database' },
-  { name: 'Streamlit', group: 'Dashboards' },
-  { name: 'TensorFlow', group: 'Deep Learning' },
+  { name: 'NumPy', group: 'Data' },
   { name: 'pytest', group: 'Testing' },
 ];
 
@@ -60,12 +61,12 @@ export const skills = [
   {
     name: 'Generative AI',
     description:
-      'LLM apps, retrieval-augmented generation and agentic workflows with LangGraph, semantic search on Pinecone, and the OpenAI, Groq and Tavily APIs.',
+      'LLM apps, agentic RAG and multi-agent workflows with LangGraph, semantic search on Pinecone, the OpenAI, Groq and Tavily APIs, and fully offline local LLMs with Ollama.',
   },
   {
     name: 'Machine Learning',
     description:
-      'Supervised and unsupervised learning, regression, classification, NLP and embeddings using Scikit-learn, TensorFlow, Pandas, NumPy and sentence-transformers.',
+      'Supervised and unsupervised learning, regression, classification, NLP and embeddings using Scikit-learn, Pandas, NumPy and sentence-transformers.',
   },
   {
     name: 'Backend & APIs',
@@ -73,9 +74,9 @@ export const skills = [
       'Production-style REST APIs with FastAPI and Flask, SQLAlchemy, OAuth 2.0 and APScheduler jobs, backed by MySQL, MongoDB and SQLite.',
   },
   {
-    name: 'Frontend & Dashboards',
+    name: 'Frontend',
     description:
-      'React and Tailwind CSS interfaces and Streamlit dashboards that put models in front of real users with fast, clear feedback.',
+      'React and Tailwind CSS interfaces that put models in front of real users with fast, clear feedback.',
   },
   {
     name: 'DevOps & Testing',
@@ -83,6 +84,7 @@ export const skills = [
       'Docker containers, GitHub Actions CI/CD pipelines and pytest suites, so projects run the same on a laptop as they do in a public demo.',
   },
 ];
+
 
 export const experience = [
   {
