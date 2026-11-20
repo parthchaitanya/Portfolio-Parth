@@ -2,7 +2,6 @@ import { useState } from 'react';
 import FadeIn from '../components/FadeIn';
 import Magnet from '../components/Magnet';
 import ContactButton from '../components/ContactButton';
-import ResumeButton from '../components/ResumeButton';
 import Orb from '../components/Orb';
 import { navLinks, profile } from '../data';
 
@@ -46,7 +45,6 @@ export default function HeroSection() {
           {profile.tagline}
         </FadeIn>
         <FadeIn delay={0.5} y={20} className="flex flex-wrap items-end justify-end gap-2 sm:gap-3">
-          <ResumeButton />
           <ContactButton />
         </FadeIn>
       </div>
